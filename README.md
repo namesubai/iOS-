@@ -145,7 +145,7 @@
 ```
 - (BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(int)row;
 ```
-- 使用did表示已经发生，will表示将要发生，should表示调用did,will的带来方法
+- 使用did表示已经发生，will表示将要发生，should表示调用带有did,will的方法
 
 ```
 - (void)browserDidScroll:(NSBrowser *)sender;
