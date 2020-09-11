@@ -332,6 +332,14 @@ dispatch_queue_create(<#const char * _Nullable label#>, <#dispatch_queue_attr_t 
    static NSString *const kHNVesionString = @"2.0.9";
    
    ```
+ - 数组
+ 
+ ```
+ 遍历使用enumerateObjectsUsingBlock,因为自带autoreleasepool
+ [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+ }];
+ ```
+ 
   
 ### 5. 内存管理
  
@@ -419,6 +427,25 @@ dispatch_queue_create(<#const char * _Nullable label#>, <#dispatch_queue_attr_t 
  - 最好每天都有codereview
  - 发现同事代码有问题需要告知同事一声
  - 能沟通最好当面沟通解决问题
+ 
+### 10. git 
+
+#### 分支管理
+- master分支，版本发布，打tag，代码只能从其他分支合并过来，不能修改
+- dev分支，保持开发的最新代码，当发布测试完成这里可以考虑打tag
+- feature分支,从dev分支出来的开发新功能的分支，以feature/XXX格式命名，功能开发完合并到dev
+- test分支，测试分支，feature开发完合并到dev，再合并到test分支进行测试，测试的bug在test修改完再合并回dev,feature,测试完成可以上线再合并到master
+- hotfix,线上问题修复，以master分支出来的分支，修复测试完成合并到master,dev
+
+#### commit标识
+
+常用的
+- [fix] -> 表示bug修复
+- [feat] -> 新功能
+- [refactor] -> 代码重构
+- [docs] -> 调整代码格式
+- [import] -> 导入库
+
 
 
 
