@@ -435,7 +435,7 @@ dispatch_queue_create(<#const char * _Nullable label#>, <#dispatch_queue_attr_t 
 - dev分支，保持开发的最新代码，当发布测试完成这里可以考虑打tag
 - feature分支,从dev分支出来的开发新功能的分支，以feature/XXX格式命名，功能开发完合并到dev
 - test分支，测试分支，feature开发完合并到dev，再合并到test分支进行测试，测试的bug在test修改完再合并回dev,feature,测试完成可以上线再合并到master
-- hotfix,线上问题修复，以master分支出来的分支，修复测试完成合并到master,dev
+- hotfix，以master分支出来的分支，线上问题修复，修复测试完成合并到master,dev
 
 #### commit标识
 
